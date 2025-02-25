@@ -121,7 +121,17 @@
     </div>
 
 
-
+<script>
+    $(document).on("click", ".site-nav-toggler", function(){
+        $('body').addClass('open-site-nav');
+        $('body').css({'overflow':'hidden'});
+    });
+    
+    $(document).on("click", ".site-nav-closer", function(){
+        $('body').removeClass('open-site-nav');
+        $('body').css({'overflow':''});
+    });
+</script>
 
     <footer id="colophon" class="bg-white border-top pt-4 site-footer">
         <div class="container">
@@ -167,16 +177,5 @@
     <footer id="colophon" class="bg-white border-top pt-4 site-footer">
         <!-- Footer content here -->
     </footer>
-<script>
-    $(document).on("click", ".site-nav-toggler", function(){
-        $('body').addClass('open-site-nav');
-        $('body').css({'overflow':'hidden'});
-    });
-    
-    $(document).on("click", ".site-nav-closer", function(){
-        $('body').removeClass('open-site-nav');
-        $('body').css({'overflow':''});
-    });
-</script>
 </body>
 </html>
