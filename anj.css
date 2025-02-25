@@ -86,7 +86,7 @@
 }
 h1.site-logo {
   font-weight: 100;
-  font-size: 5vw; /* Reduced from 10vw */
+  font-size: 4.5vw; /* Reduced from 10vw */
   line-height: 1.2; /* Adjusted for better readability */
   font-variation-settings: 'wght' 100, 'wdth' 85;
   display: flex;
