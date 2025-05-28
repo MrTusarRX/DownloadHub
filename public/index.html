@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TusarX | Upload Mod</title>
+<link rel="icon" type="image/png" href="/ico.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-blue-900 min-h-screen text-white">
+  <div class="container mx-auto px-4 py-8 max-w-4xl">
+  
+    <header class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 flex items-center justify-center">
+        <i class="fas fa-upload mr-4 text-blue-400"></i>
+        Upload
+      </h1>
+      <p class="text-blue-200 max-w-2xl mx-auto">
+        An interface to upload your mod details, including game ID, name, version, images, and more.
+        <br>
+        <span class="text-red-400">Please note:</span> All mod details are processed instantly and made available to the community.
+      </p>
+    </header>
+
+    <div class="bg-gray-800 rounded-xl shadow-2xl overflow-hidden">
+      <form action="/upload" method="POST" class="p-6 md:p-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <div class="md:col-span-2">
+            <label class="block mb-2 font-medium text-blue-300">
+              <i class="fas fa-id-card mr-2"></i>Game ID
+            </label>
+            <div class="relative">
+              <input type="text" name="id" required
+                     class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                     placeholder="Enter unique game ID">
+              <i class="fas fa-asterisk text-xs text-red-500 absolute top-4 right-3"></i>
+            </div>
+          </div>
+          
+          <div>
+            <label class="block mb-2 font-medium text-blue-300">
+              <i class="fas fa-file-signature mr-2"></i>Mod Name
+            </label>
+            <div class="relative">
+              <input type="text" name="name" required
+                     class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                     placeholder="Your mod name">
+              <i class="fas fa-asterisk text-xs text-red-500 absolute top-4 right-3"></i>
+            </div>
+          </div>
+          
+          <!-- Version -->
+          <div>
+            <label class="block mb-2 font-medium text-blue-300">
+              <i class="fas fa-code-branch mr-2"></i>Version
+            </label>
+            <input type="text" name="version"
+                   class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                   placeholder="e.g. 1.2.0">
+          </div>
+          
+          <!-- Image URL -->
+          <div>
+            <label class="block mb-2 font-medium text-blue-300">
+              <i class="fas fa-image mr-2"></i>Image URL
+            </label>
+            <input type="text" name="img"
+                   class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                   placeholder="https://example.com/image.jpg">
+          </div>
+          
+          <!-- Second Image URL -->
+          <div>
+            <label class="block mb-2 font-medium text-blue-300">
+              <i class="fas fa-images mr-2"></i>Second Image URL
+            </label>
+            <input type="text" name="img2"
+                   class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                   placeholder="https://example.com/image2.jpg">
+          </div>
+          
+          <!-- Href -->
+          <div>
+            <label class="block mb-2 font-medium text-blue-300">
+              <i class="fas fa-link mr-2"></i>Mod URL
+            </label>
+            <input type="text" name="href"
+                   class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                   placeholder="https://example.com/mod">
+          </div>
+          
+          <!-- Size -->
+          <div>
+            <label class="block mb-2 font-medium text-blue-300">
+              <i class="fas fa-weight-hanging mr-2"></i>Size
+            </label>
+            <input type="text" name="size"
+                   class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                   placeholder="e.g. 15 MB">
+          </div>
+          
+          <!-- Game Update Date -->
+          <div>
+            <label class="block mb-2 font-medium text-blue-300">
+              <i class="fas fa-calendar-day mr-2"></i>Game Update Date
+            </label>
+            <input type="text" name="game_update" pattern="\d{4}-\d{2}-\d{2}"
+                   class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                   placeholder="YYYY-MM-DD">
+          </div>
+          
+          <!-- MyMod Update Date -->
+          <div>
+            <label class="block mb-2 font-medium text-blue-300">
+              <i class="fas fa-calendar-check mr-2"></i>MyMod Update Date
+            </label>
+            <input type="text" name="mymod_update"
+                   class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                   placeholder="YYYY-MM-DD">
+          </div>
+          
+          <!-- Mod Info -->
+          <div>
+            <label class="block mb-2 font-medium text-blue-300">
+              <i class="fas fa-info-circle mr-2"></i>Mod Info (optional)
+            </label>
+            <input type="text" name="mod_info"
+                   class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                   placeholder="Additional mod information">
+          </div>
+          
+          <!-- Game Link -->
+          <div>
+            <label class="block mb-2 font-medium text-blue-300">
+              <i class="fas fa-gamepad mr-2"></i>Game Link
+            </label>
+            <input type="text" name="game_link"
+                   class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                   placeholder="Game official URL">
+          </div>
+          
+          <!-- Description -->
+          <div class="md:col-span-2">
+            <label class="block mb-2 font-medium text-blue-300">
+              <i class="fas fa-align-left mr-2"></i>Description
+            </label>
+            <textarea name="dis" rows="4"
+                      class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                      placeholder="Describe your mod..."></textarea>
+          </div>
+          
+          <!-- Game Features -->
+          <div class="md:col-span-2">
+            <label class="block mb-2 font-medium text-blue-300">
+              <i class="fas fa-list mr-2"></i>Game Features (comma-separated)
+            </label>
+            <textarea name="gameinfo" rows="3"
+                      class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                      placeholder="Feature 1, Feature 2, Feature 3..."></textarea>
+          </div>
+          
+          <!-- Submit Button -->
+          <div class="md:col-span-2 mt-4">
+            <button type="submit"
+                    class="w-full bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center">
+              <i class="fas fa-cloud-upload-alt mr-3 text-xl"></i>
+              Upload Mod
+            </button>
+          </div>
+        </div>
+      </form>
+      
+      <!-- Form Footer -->
+      <div class="bg-gray-900 px-6 py-4 text-sm text-gray-400">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-2 md:mb-0">
+            <i class="fas fa-shield-alt mr-2"></i>All uploads are securely processed
+          </div>
+          <div>
+            <i class="fas fa-info-circle mr-2"></i>Required fields are marked with <i class="fas fa-asterisk text-xs text-red-500"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Features Section -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+      <div class="bg-blue-900/30 backdrop-blur-sm p-6 rounded-xl border border-blue-800/50">
+        <div class="text-blue-400 mb-4">
+          <i class="fas fa-bolt text-3xl"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-2">Fast Processing</h3>
+        <p class="text-blue-200">Your mod details are processed instantly and made available to the community.</p>
+      </div>
+      
+      <div class="bg-blue-900/30 backdrop-blur-sm p-6 rounded-xl border border-blue-800/50">
+        <div class="text-blue-400 mb-4">
+          <i class="fas fa-users text-3xl"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-2">Community Focused</h3>
+        <p class="text-blue-200">Share your creations with thousands of passionate gamers and modders.</p>
+      </div>
+      
+      <div class="bg-blue-900/30 backdrop-blur-sm p-6 rounded-xl border border-blue-800/50">
+        <div class="text-blue-400 mb-4">
+          <i class="fas fa-shield-alt text-3xl"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-2">Secure Uploads</h3>
+        <p class="text-blue-200">We verify all submissions to ensure a safe environment for everyone.</p>
+      </div>
+    </div>
+    
+    <!-- Footer -->
+   <footer class="mt-12 pt-8 border-t border-gray-700 text-center text-gray-400">
+   <p>© <span id="currentYear"></span> Mods Hub. All rights reserved.</p>
+   <script>
+     document.getElementById('currentYear').textContent = new Date().getFullYear();
+   </script>
+     <p class="mt-2 text-sm">Made with <i class="fas fa-heart text-red-500"></i> TusarX</p>
+     <p id="datetime" class="mt-2 text-xs text-blue-300"></p>
+     <script>
+      const dt = new Date();
+      document.getElementById('datetime').textContent =
+        'Current date and time: ' + dt.toLocaleString();
+     </script>
+   </footer>
+  </div>
+</body>
+</html>
