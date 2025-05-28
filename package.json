@@ -1,0 +1,20 @@
+{
+  "name": "downloadhub",
+  "version": "1.0.0",
+  "description": "Welcome to **DownloadHub**! This is a personal project hosted at [https://mrtusarrx.github.io/DownloadHub](https://mrtusarrx.github.io/DownloadHub), featuring a collection of customized apps and games for enthusiasts. Created and maintained by MrTusarRX, this site is a space for exploring modified software and gaming experiences.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Techflux0/DownloadHub.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Techflux0/DownloadHub/issues"
+  },
+  "homepage": "https://github.com/Techflux0/DownloadHub#readme"
+}
