@@ -53,6 +53,7 @@ app.get('/mods', async (req, res) => {
   }
 });
 
+//test dont worry about this
 
 // Handle mod upload
 app.post('/upload', async (req, res) => {
