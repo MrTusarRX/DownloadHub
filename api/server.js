@@ -32,30 +32,18 @@ const modSchema = new mongoose.Schema({
 
 const Mod = mongoose.model('Mod', modSchema);
 
-// Middleware
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-// Serve HTML UI
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
 
 
-app.get('/mods', async (req, res) => {
-  try {
-    const mods = await Mod.find().sort({ mymod_update: -1 });
-    res.json(mods);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: 'Failed to fetch mods' });
-  }
-});
+v
 
-//test dont worry about this
-
-// Handle mod upload
 app.post('/upload', async (req, res) => {
   const {
     id,
@@ -73,7 +61,7 @@ app.post('/upload', async (req, res) => {
     gameinfo
   } = req.body;
 
-  // Parse dates with validation
+
   const parseDate = (dateString) => {
     if (!dateString) return new Date();
     const date = new Date(dateString);
@@ -104,7 +92,6 @@ app.post('/upload', async (req, res) => {
   } catch (err) {
     console.error(err);
     
-    // Handle validation errors
     if (err.name === 'ValidationError') {
       const messages = Object.values(err.errors).map(val => val.message);
       return res.status(400).send(`Validation error: ${messages.join(', ')}`);
