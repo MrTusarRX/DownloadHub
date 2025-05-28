@@ -4,6 +4,8 @@
   "description": "Welcome to **DownloadHub**! This is a personal project hosted at [https://mrtusarrx.github.io/DownloadHub](https://mrtusarrx.github.io/DownloadHub), featuring a collection of customized apps and games for enthusiasts. Created and maintained by MrTusarRX, this site is a space for exploring modified software and gaming experiences.",
   "main": "index.js",
   "scripts": {
+    "start": "node api/server.js",
+    "dev": "nodemon api/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +18,14 @@
   "bugs": {
     "url": "https://github.com/Techflux0/DownloadHub/issues"
   },
-  "homepage": "https://github.com/Techflux0/DownloadHub#readme"
+  "homepage": "https://github.com/Techflux0/DownloadHub#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.15.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
 }
