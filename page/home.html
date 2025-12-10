@@ -1,0 +1,128 @@
+  <div id="adminPanel" class="admin-panel">
+            <div class="admin-overlay" id="adminOverlay"></div>
+            <div class="admin-content">
+                <div class="admin-header">
+                    <h3><i class="fas fa-user-shield"></i> Admin Panel</h3>
+                    <button id="closeAdmin" class="admin-close" aria-label="Close admin panel">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <div class="admin-body">
+                    <div class="admin-tabs">
+                        <button class="admin-tab active" data-tab="add">Add New Mod</button>
+                        <button class="admin-tab" data-tab="analytics">Analytics</button>
+                    </div>
+                    
+                    <div id="addTab" class="admin-tab-content active">
+                        <form id="addModForm" class="admin-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="modName">Mod Name *</label>
+                                    <input type="text" id="modName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="modVersion">Version *</label>
+                                    <input type="text" id="modVersion" placeholder="e.g., 2.1.5" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="modSize">Size (MB) *</label>
+                                    <input type="number" id="modSize" min="1" max="1000" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="modDownloadUrl">APK Download Link *</label>
+                                    <input type="url" id="modDownloadUrl" placeholder="https://example.com/mod.apk" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="modImageUrl">Cover Image URL</label>
+                                <input type="url" id="modImageUrl" placeholder="https://example.com/image.jpg">
+                                <small>Leave empty to use default image</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="modTagline">Short Tagline *</label>
+                                <input type="text" id="modTagline" maxlength="100" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="modDescription">Description *</label>
+                                <textarea id="modDescription" rows="4" required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="modFeatures">Mod Features (comma-separated) *</label>
+                                <input type="text" id="modFeatures" placeholder="Unlimited Ammo, Ad-free, Unlocked Levels" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="modTags">Tags (comma-separated) *</label>
+                                <input type="text" id="modTags" placeholder="unlocked, premium, ad-free" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="modReleaseNotes">Release Notes</label>
+                                <textarea id="modReleaseNotes" rows="3"></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="modScreenshots">Screenshot URLs (comma-separated)</label>
+                                <input type="text" id="modScreenshots" placeholder="https://example.com/screen1.jpg, https://example.com/screen2.jpg">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="modJson">JSON Metadata (optional)</label>
+                                <textarea id="modJson" rows="3" placeholder='{"author": "DevName", "source": "GitHub"}'></textarea>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="submit-btn">
+                                    <i class="fas fa-plus"></i> Add Mod
+                                </button>
+                                <button type="button" id="resetForm" class="reset-btn">
+                                    <i class="fas fa-redo"></i> Reset
+                                </button>
+                            </div>
+                            
+                            <div id="formFeedback" class="form-feedback"></div>
+                        </form>
+                    </div>
+                    
+                    <div id="analyticsTab" class="admin-tab-content">
+                        <div class="analytics-card">
+                            <h4><i class="fas fa-chart-line"></i> Site Analytics</h4>
+                            <div class="analytics-stats">
+                                <div class="analytics-stat">
+                                    <span class="stat-label">Total Mods</span>
+                                    <span id="totalModsCount" class="stat-value">0</span>
+                                </div>
+                                <div class="analytics-stat">
+                                    <span class="stat-label">Total Visits</span>
+                                    <span id="adminTotalVisits" class="stat-value">0</span>
+                                </div>
+                                <div class="analytics-stat">
+                                    <span class="stat-label">Total Downloads</span>
+                                    <span id="totalDownloads" class="stat-value">0</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="analytics-card">
+                            <h4><i class="fas fa-crown"></i> Top 3 Mods</h4>
+                            <div id="topModsList" class="top-mods-list">
+                            </div>
+                        </div>
+                        
+                        <div class="analytics-card">
+                            <h4><i class="fas fa-clock"></i> Recently Added</h4>
+                            <div id="recentModsList" class="recent-mods-list">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="downloadHubApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DownloadHub</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="res/img/image.png">
+    <link rel="stylesheet" href="res/styles.css">
+</head>
+<body ng-controller="MainController">
+    <div id="app" class="app-container">
+        <header class="main-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-glyph">
+                        <img src="res/img/image.png"  style="width: 70px; height: 70px;"></img>
+                    </div>
+                    <h1 class="logo-text">MrTusarRX</h1>
+                    <span class="tagline">Mod Community Showcase</span>
+                </div>
+                
+                <div class="search-section">
+                    <div class="search-wrapper">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" id="searchInput" class="search-input" placeholder="Search mods by name or tag..." aria-label="Search mods">
+                        <button id="clearSearch" class="clear-search-btn" aria-label="Clear search">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="filter-controls">
+                        <select id="sortSelect" class="sort-select" aria-label="Sort by">
+                            <option value="newest">Newest First</option>
+                            <option value="popular">Most Downloaded</option>
+                            <option value="visits">Most Visited</option>
+                            <option value="size">Size: Small to Large</option>
+                        </select>
+                        
+                        <div class="tag-filters">
+                            <button class="tag-filter active" data-tag="all">All</button>
+                            <button class="tag-filter" data-tag="unlocked">Unlocked</button>
+                            <button class="tag-filter" data-tag="premium">Premium</button>
+                            <button class="tag-filter" data-tag="ad-free">Ad-free</button>
+                            <button class="tag-filter" data-tag="cheats">Cheats</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="header-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Total Visits</span>
+                        <span id="totalVisits" class="stat-value">12,847</span>
+                    </div>
+                    <button id="adminToggle" class="admin-btn" aria-label="Admin panel">
+                        <i class="fas fa-user-shield"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+
+        
+        <main class="main-content">
+            <div class="content-header">
+                <h2>Authorized Mods & Builds</h2>
+                <p class="subtitle">Developer-approved and open-source Android modifications</p>
+                <div id="resultsInfo" class="results-info">
+                    <span id="resultsCount">0</span> mods available
+                </div>
+            </div>
+            <div id="appsGrid" class="apps-grid">
+            </div>
+            <div id="emptyState" class="empty-state" style="display: none;">
+                <div class="empty-icon">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <h3>No mods found</h3>
+                <p>Try adjusting your search or filters to find what you're looking for.</p>
+                <button id="resetFilters" class="neon-btn">Reset Filters</button>
+            </div>
+            <div class="load-more-section">
+                <button id="loadMore" class="load-more-btn">Load More Mods</button>
+            </div>
+        </main>
+        <div id="detailModal" class="detail-modal">
+            <div class="modal-overlay" id="modalOverlay"></div>
+            <div class="modal-content">
+                <button id="closeModal" class="modal-close" aria-label="Close modal">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="modal-body">
+                </div>
+            </div>
+        </div>
+      
+
+
+    <div ng-view></div>
+
+
+
+
+
+
+
+<footer class="main-footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo-glyph small">
+                        <img src="res/gif/MrTusarRXx.gif" style="width: 50px; height: 50px; background: linear-gradient(360deg,white); border-radius: 30px;"></img>
+                    </div>
+                    <div class="footer-text">
+                        <h3>MrTusarRX</h3>
+                        <p>Legal Community Hub for Android Mods & Builds</p>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#" class="footer-link">About</a>
+                    <a href="#" class="footer-link">Submission Guidelines</a>
+                    <a href="#" class="footer-link">Legal</a>
+                    <a href="https://t.me/MrTusarRXx" class="footer-link">Contact</a>
+                </div>
+                
+                <div class="footer-disclaimer">
+                    <p><i class="fas fa-exclamation-triangle"></i> All mods are developer-authorized or open-source. Download at your own risk.</p>
+                </div>
+            </div>
+            
+       <div class="footer-copyright">
+    <p>&copy; <span id="year"></span> MrTusarRX Mod Community Showcase. All rights reserved.</p>
+</div>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+        </footer>
+
+    <script src="lib/app.js"></script>
+</body>
+
+</html>
