@@ -2,10 +2,13 @@
 <html lang="en" ng-app="downloadHubApp">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1.0, minimum-scale=1.0, maximum-scale=5.0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
     <title>DownloadHub</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+    <meta name="theme-color" content="#00CCFF">
+    <meta name="description" content="Get the latest updates and downloads for your favorite games!">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -90,10 +93,12 @@
         </main>
         <div id="detailModal" class="detail-modal">
             <div class="modal-overlay" id="modalOverlay"></div>
-            <div class="modal-content">
-                <button id="closeModal" class="modal-close" aria-label="Close modal">
-                    <i class="fas fa-times"></i>
-                </button>
+            <div class="modal-content">               
+                <a href="/#!/home">
+                <button id="closeModal" class="modal-close" aria-label="Close modal">
+                    <i class="fas fa-times"></i>
+                </button>
+                  </a>
                 <div class="modal-body">
                 </div>
             </div>
@@ -146,3 +151,4 @@
 </body>
 
 </html>
+
