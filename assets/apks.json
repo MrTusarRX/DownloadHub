@@ -1,24 +1,24 @@
 [
   {
     "id": "bhumir-001",
-    "name": "Bhumir Tathya - বাংলার জমির তথ্য",
+    "name": "WB Land Tools",
     "tagline": "Banglarbhumi Land Records & Market Value (Ad-Free Mod)",
-    "version": "10.6.0",
-    "size": 12.1,
+    "version": "2.2.2",
+    "size": 19.3,
     "downloads": 18500,
     "visits": 34200,
     "tags": ["ad-free", "utility", "land-records", "bengal", "no-trackers"],
     "features": ["No Ads", "All Bugs Removed", "Feature Enhanced", "No Trackers", "Clean & Fast"],
-    "description": "Official Banglarbhumi (Jomir Tothya) app mod with all advertisements removed, trackers disabled, bugs fixed and performance enhanced. Check West Bengal land records, plot/khatian details, market value of land & flats, registration office locations and government schemes without any interruption.",
+    "description": "WB Land Tools app mod with all advertisements removed, trackers disabled, bugs fixed and performance enhanced. Check West Bengal land records, plot/khatian details, market value of land & flats, registration office locations and government schemes without any interruption.",
     "releaseNotes": "Updated to latest version 10.6.0 • Removed all ads • Cleaned unnecessary permissions • Enhanced speed • Fixed captcha loading issues",
-    "imageUrl": "https://play-lh.googleusercontent.com/S3K0RcpwT7_8C2QB7NgfKfw0_rgscgIf2V0md0cGrNRW7_lpyKbaNeQzDc3QmL1KrZw=s75-rw",
+    "imageUrl": "https://play-lh.googleusercontent.com/mEH2bLpxTs7YKXVrM4TV3O1qic4mN6HCH51aL9LoELyITTB0YUd7x1BkCHUds6RjQTk=w600-h300-pc0xffffff-pd",
     "screenshots": [
-      "https://play-lh.googleusercontent.com/S3K0RcpwT7_8C2QB7NgfKfw0_rgscgIf2V0md0cGrNRW7_lpyKbaNeQzDc3QmL1KrZw",
-      "https://play-lh.googleusercontent.com/0rqwF9tJ8o8Z6O0m9v5j5b8a7f8e8d9c1b2a3f4g5h6j7k8l9m0n1o2p3q4r",
-      "https://play-lh.googleusercontent.com/9m8n7b6v5c4x3z2a1s0d9f8g7h6j5k4l3m2n1b0v9c8x7z6a5s4d3f2g1h"
+      "https://play-lh.googleusercontent.com/7JEMdSdqYDYSkw-CYYxEO2geIcGrtYgs4-P6EBAOP49yQHgLtzCkYrtAsGsdHrDVQBo=w327-h184-rw",
+      "https://play-lh.googleusercontent.com/-vUSC8o-BWf3skIucn2umwiYEdLNRtaH73i3qvqtArzZADPztbJhrrU0C76ALWdJPw=w327-h184-rw",
+      "https://play-lh.googleusercontent.com/q8VcmhGx7wsNHeAICxsq5Vd0SNZEz-Lys97FonbYXBq6JgFeCRtkCR-ebDswac1w9L4=w327-h184-rw"
     ],
-    "downloadUrl": "https://github.com/MrTusarRX/BanglarBhumi-mod-apk/raw/refs/heads/main/Bhumir%20Tathya_10.6.0_apks.apk",
-    "addedDate": "2025-01-01"
+    "downloadUrl": "https://github.com/munnayadavfu99-cell/MY-apk/releases/download/myapk/Banglarbhumi.-._2.2.3_Moded_By_Tusar.apk",
+    "addedDate": "2025-12-12"
   },
   {
     "id": "stickman-001",
@@ -149,4 +149,5 @@
     "downloadUrl": "https://github.com/tusarkhan800/do-not-use-me/releases/download/do-not-use-me/Polyfield_0.7.2_Mod.apk",
     "addedDate": "2025-06-27"
   }
+
 ]
