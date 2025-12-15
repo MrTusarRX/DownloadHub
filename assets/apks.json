@@ -134,7 +134,7 @@
     "downloads": 89000,
     "visits": 134000,
     "tags": ["aimbot", "esp", "fly", "Magic Bullet", "ww2", "offline-online"],
-    "features": ["Aimbot", "ESP (Name/Box/Line)", "Fly Hack", "Teleport", "Mass Kill", "Unlimited Ammo", "One Hit Kill"],
+    "features": ["Aimbot", "Magic Bullet", "ESP (Name/Box/Line)", "Fly Hack", "Teleport", "Mass Kill", "Unlimited Ammo", "One Hit Kill"],
     "description": "Stylized WW2 multiplayer & offline FPS with complete cheat menu. Includes aimbot, ESP, fly, teleport and many more powerful features for total domination.",
     "releaseNotes": "Updated cheats for v0.7.3 • Added Magic Bullet • Improved ESP visibility",
     "imageUrl": "https://play-lh.googleusercontent.com/ciblv6tOSwvD76a0sWmTrLz4oWHbM3qSis0LtoRFNdl91xKV3yGttmfOYUzD7HfOuylw=s75-rw",
@@ -151,4 +151,5 @@
   }
 
 ]
+
 
