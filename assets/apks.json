@@ -129,14 +129,14 @@
     "id": "66aeff1fdabfc",
     "name": "Polyfield",
     "tagline": "WW2 Low-Poly FPS with Full Cheat Menu",
-    "version": "0.7.2",
-    "size": 151.37,
+    "version": "0.7.3",
+    "size": 154.00,
     "downloads": 89000,
     "visits": 134000,
-    "tags": ["aimbot", "esp", "fly", "ww2", "offline-online"],
+    "tags": ["aimbot", "esp", "fly", "Magic Bullet", "ww2", "offline-online"],
     "features": ["Aimbot", "ESP (Name/Box/Line)", "Fly Hack", "Teleport", "Mass Kill", "Unlimited Ammo", "One Hit Kill"],
     "description": "Stylized WW2 multiplayer & offline FPS with complete cheat menu. Includes aimbot, ESP, fly, teleport and many more powerful features for total domination.",
-    "releaseNotes": "Updated cheats for v0.7.2 • Added Mass Kill • Improved ESP visibility",
+    "releaseNotes": "Updated cheats for v0.7.3 • Added Magic Bullet • Improved ESP visibility",
     "imageUrl": "https://play-lh.googleusercontent.com/ciblv6tOSwvD76a0sWmTrLz4oWHbM3qSis0LtoRFNdl91xKV3yGttmfOYUzD7HfOuylw=s75-rw",
     "screenshots": [
       "https://play-lh.googleusercontent.com/ejqUBdJeOe234J5kbzqSnQaU4wB5MWq6hjzAbo5VnNG-JEQKK6TFYEoK6-MwxvOcuEE=w327-h184-rw",
@@ -146,8 +146,9 @@
       "https://play-lh.googleusercontent.com/JNgULtQb4p8RWz8abmMKMDY8XkHtVXNj-_XrV2SBs5mq6xaQQG8KP6TxxAA9-O4n2GTe=w327-h184-rw",
       "https://play-lh.googleusercontent.com/-QiqlbjgLrpzQ93Zu6Oj4CVrIVwXLabJ8b0UZHTUEludP9x3En07R9IU9RxoaV--2pg=w327-h184-rw"
     ],
-    "downloadUrl": "https://github.com/tusarkhan800/do-not-use-me/releases/download/do-not-use-me/Polyfield_0.7.2_Mod.apk",
-    "addedDate": "2025-06-27"
+    "downloadUrl": "https://github.com/munnayadavfu99-cell/MY-apk/releases/download/myapk/Polyfield_V0.7.3_Mod.apk",
+    "addedDate": "2025-12-15"
   }
 
 ]
+
